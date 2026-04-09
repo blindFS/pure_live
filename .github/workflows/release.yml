@@ -253,6 +253,13 @@ jobs:
           flutter build ios --release --no-codesign
           ln -sf ./build/ios/iphoneos Payload
           zip -r9 purelive.ipa Payload/Runner.app
+      
+      - name: 上传IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-ipa
+          path: purelive.ipa
+          retention-days: 1
 
   publish-release:
     runs-on: ubuntu-latest
