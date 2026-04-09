@@ -109,7 +109,7 @@ dependencies:
   mime: ^2.0.0
   flv_lzc:
     git: https://github.com/liuchuancong/flv_lzc.git
-  device_info_plus: ^12.2.0
+  device_info_plus: 12.3.0
   auto_orientation_v2: ^2.3.6
   dart_quickjs:
     git: https://github.com/xiaoyaocz/dart_quickjs.git
