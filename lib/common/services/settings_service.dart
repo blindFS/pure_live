@@ -36,7 +36,7 @@ class SettingsService extends GetxController {
   // ==============================
   final autoRefreshTime = (HivePrefUtil.getInt('autoRefreshTime') ?? 3).obs;
   final enableDenseFavorites = (HivePrefUtil.getBool('enableDenseFavorites') ?? true).obs;
-  final enableBackgroundPlay = (HivePrefUtil.getBool('enableBackgroundPlay') ?? false).obs;
+  final enableBackgroundPlay = (HivePrefUtil.getBool('enableBackgroundPlay') ?? true).obs;
   final enableStartUp = (HivePrefUtil.getBool('enableStartUp') ?? true).obs;
   final enableRotateScreenWithSystem = (HivePrefUtil.getBool('enableRotateScreenWithSystem') ?? false).obs;
   final enableScreenKeepOn = (HivePrefUtil.getBool('enableScreenKeepOn') ?? true).obs;
@@ -650,7 +650,7 @@ class SettingsService extends GetxController {
     enableAutoShutDownTime.value = json['enableAutoShutDownTime'] ?? false;
     enableDynamicTheme.value = json['enableDynamicTheme'] ?? false;
     enableDenseFavorites.value = json['enableDenseFavorites'] ?? false;
-    enableBackgroundPlay.value = json['enableBackgroundPlay'] ?? false;
+    enableBackgroundPlay.value = json['enableBackgroundPlay'] ?? true;
     enableStartUp.value = json['enableStartUp'] ?? true;
     enableRotateScreenWithSystem.value = json['enableRotateScreenWithSystem'] ?? false;
     enableScreenKeepOn.value = json['enableScreenKeepOn'] ?? true;
